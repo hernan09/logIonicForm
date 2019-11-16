@@ -1,0 +1,33 @@
+<ion-header >
+  <ion-toolbar color="light">
+    <ion-title  class="ion-text-center"><span><img id="logo" src="assets/img/logo.png" alt=""></span></ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content color="primary">
+    <div class="head"></div>
+    <form >
+        <div id="contenedor">
+            <ion-item>
+                <ion-label position="floating">Nombre</ion-label>
+                <ion-input (ionChange)="cambioEnv($event)" [(ngModel)]="names" type="text"[ngModelOptions]="{standalone: true}"></ion-input>
+                <ion-icon slot="end" name="person"></ion-icon>
+              </ion-item>
+             
+              <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input  #pass (ionChange)="cambioEnvent($event)" [(ngModel)]="password" [type]="passwordTypeInput"[ngModelOptions]="{standalone: true}"></ion-input>
+                <ion-icon id="eye" slot="end" name="eye" (click)="changeLogo()"></ion-icon>
+              </ion-item>
+              
+              <ion-button id="suces" (click)="logForm()"[disabled]="isTrueAll()==false" expand="full" color="success">Log in</ion-button>
+         </div>
+    </form>
+  <div class="foot"></div>
+</ion-content>
+<ion-footer >
+  <ion-toolbar color="light">
+      <ion-button expand="full"fill="outline" color="primary">Log on</ion-button>
+  </ion-toolbar> 
+</ion-footer>
