@@ -1,7 +1,8 @@
 import { Component, OnInit, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validator, FormBuilder, Validators } from '@angular/forms';
 import { LogingService } from '../loging.service';
-import { element } from 'protractor';
+
+
 
 
 // tslint:disable-next-line: label-position

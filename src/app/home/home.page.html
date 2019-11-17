@@ -7,7 +7,10 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
+  <div *ngIf="body !='raptor'">
+     <h1>sorry yor not get the data :x</h1>
+  </div>
+  <div class="ion-padding" *ngIf="body =='raptor'">
     The world is your oyster.
     <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
   </div>

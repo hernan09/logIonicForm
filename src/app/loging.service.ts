@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomePage } from './home/home.page';
+import { NavController } from '@ionic/angular';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,8 +16,8 @@ auth(name, password , body) {
   };
    // tslint:disable-next-line: triple-equals
   if ( name == 'hernan' && password == 'raptor') {
-       this.router.navigateByUrl('/home', body);
-       console.log('se ah logueado correctamente', body);
+       this.router.navigate(['/home', { body:body.pass}]);
+       console.log('se ah logueado correctamente');
        return true;
    } else {
      this.router.navigateByUrl('/login');
